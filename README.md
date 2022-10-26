@@ -1,5 +1,5 @@
 # shoppingcartrestapi
-Akses melalui *Postman*
+Akses melalui **Postman**
 ## Routes
 - localhost:3000/register
 - localhost:3000/login
