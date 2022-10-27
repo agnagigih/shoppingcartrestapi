@@ -107,10 +107,10 @@ func (controller *ProductController) EditProductAPI(c *fiber.Ctx) error {
 
 			// Save the files to disk:
 			fmt.Println(updateProduct.Picture)
-			if err := c.SaveFile(file, fmt.Sprintf(file.Filename)); err != nil {
+			if err := c.SaveFile(file, fmt.Sprintf("public/upload/%s", file.Filename)); err != nil {
 				return err
 			}
-			updateProduct.Picture = fmt.Sprintf("public/upload/%s", file.Filename)
+			updateProduct.Picture = fmt.Sprintf(file.Filename)
 		}
 	}
 
